@@ -7,7 +7,7 @@ from kivy.metrics import dp
 from kivy.uix.label import Label
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
-        super(MygGrid, self).__init__(**kwargs)
+        super(MyGrid, self).__init__(**kwargs)
         self.cols = 1
         self.inside = GridLayout()
         self.inside.cols = 2
@@ -16,13 +16,13 @@ class MyGrid(GridLayout):
         self.name = TextInput()
         self.inside.add_widget(self.name)
 
-        self.add_widget(Label(text="last name"))
+        self.inside.add_widget(Label(text="last name"))
         self.last_name = TextInput()
-        self.add_widget(self.last_name)
+        self.inside.add_widget(self.last_name)
 
         self.inside.add_widget(Label(text="email"))
         self.email = TextInput()
-        self.inside.add_widget(self.emil)
+        self.inside.add_widget(self.email)
 
         self.add_widget(self.inside)
 
@@ -34,6 +34,7 @@ class MyGrid(GridLayout):
         name = self.name.text
         last_name = self.last_name.text
         email = self.email.text
+        print(name, last_name, email)
 
 
 class MyApp(App):
