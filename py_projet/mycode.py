@@ -5,9 +5,9 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.metrics import dp
 
 from kivy.uix.label import Label
-class mygrid(GridLayout):
+class MyGrid(GridLayout):
     def __init__(self, **kwargs):
-        super(mygrid, self).__init__(**kwargs)
+        super(MygGrid, self).__init__(**kwargs)
         self.cols = 1
         self.inside = GridLayout()
         self.inside.cols = 2
@@ -30,16 +30,16 @@ class mygrid(GridLayout):
         self.submit.bind(on_press=self.login)
         self.add_widget(self.submit)
 
-    def login():
+    def login(self, instance):
         name = self.name.text
         last_name = self.last_name.text
         email = self.email.text
 
 
-class myapp(App):
+class MyApp(App):
     def build(self):
-        return mygrid()
+        return MyGrid()
 
 
 if __name__ == '__main__':
-    myapp().run()
+    MyApp().run()
