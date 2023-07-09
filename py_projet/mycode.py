@@ -26,7 +26,7 @@ class MyGrid(GridLayout):
 
         self.add_widget(self.inside)
 
-        self.submit = Button(text="submit", size_hint(None, None), size(dp(100), dp(40)))
+        self.submit = Button(text="submit", size_hint=(None, None), size=(dp(100), dp(40)))
         self.submit.bind(on_press=self.login)
         self.add_widget(self.submit)
 
