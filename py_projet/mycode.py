@@ -5,6 +5,8 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.metrics import dp
 
 from kivy.uix.label import Label
+
+
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
