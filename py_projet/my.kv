@@ -1,0 +1,33 @@
+<MyGrid>
+    name : name
+    last_name : last_name
+    email : email
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height - 200
+        pos:100, 100
+
+
+        GridLayout:
+            cols:2
+
+            Label:
+                text:"name"
+            TextInput
+                id:name
+
+            Label:
+                text:"last name"
+            TextInput
+                id:last_name
+
+            Label:
+                text:"email"
+            TextInput
+                id:email
+
+        Button:
+            text: "submit"
+            size_hint: None, None
+            on_press: root.login()
+            size: 100, 40
